@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#121212] text-white;
+  }
+}
+
+@layer components {
+  .spotify-button {
+    @apply px-4 py-2 bg-[#1DB954] hover:bg-[#1ed760] text-black font-bold rounded-full transition-all;
+  }
+  
+  .spotify-button-secondary {
+    @apply px-4 py-2 bg-transparent hover:bg-[#282828] text-white font-bold rounded-full transition-all border border-[#282828] hover:border-white;
+  }
+  
+  .spotify-input {
+    @apply w-full px-3 py-2 bg-[#282828] text-white border-none rounded-md focus:outline-none focus:ring-2 focus:ring-[#1DB954];
+  }
+  
+  input[type="date"].spotify-input {
+    @apply cursor-pointer;
+  }
+  
+  input[type="date"].spotify-input::-webkit-calendar-picker-indicator {
+    @apply filter invert opacity-50 hover:opacity-75 cursor-pointer;
+  }
+}
